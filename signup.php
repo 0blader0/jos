@@ -1,21 +1,57 @@
-<?php
-require_once 'config.php';
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrace</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <form action="php/signup-check.php" method="post">
+     	<h2>Registrace</h2>
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+          <?php if (isset($_GET['success'])) { ?>
+               <p class="success"><?php echo $_GET['success']; ?></p>
+          <?php } ?>
 
-$sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+          <label>Jmeno</label>
+          <?php if (isset($_GET['name'])) { ?>
+               <input type="text" 
+                      name="name" 
+                      placeholder="Name"
+                      value="<?php echo $_GET['name']; ?>"><br>
+          <?php }else{ ?>
+               <input type="text" 
+                      name="name" 
+                      placeholder="Zadej krestni jmeno"><br>
+          <?php }?>
 
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $username, $email, $password);
+          <label>Prihlasovaci jmeno</label>
+          <?php if (isset($_GET['uname'])) { ?>
+               <input type="text" 
+                      name="uname" 
+                      placeholder="User Name"
+                      value="<?php echo $_GET['uname']; ?>"><br>
+          <?php }else{ ?>
+               <input type="text" 
+                      name="uname" 
+                      placeholder="Zadej prihlasovaci jmeno"><br>
+          <?php }?>
 
-if ($stmt->execute()) {
-    header("Location: landing-dash.html");
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
-$stmt->close();
-$conn->close();
-?>
+     	<label>Heslo</label>
+     	<input type="password" 
+                 name="password" 
+                 placeholder="Zadej heslo"><br>
+
+          <label>Heslo znovu</label>
+          <input type="password" 
+                 name="re_password" 
+                 placeholder="Zadej heslo znovu."><br>
+
+     	<button type="submit">Zalozit ucet</button>
+          <a href="index.php" class="ca">Jiz mas ucet?</a>
+     </form>
+</body>
+</html>
