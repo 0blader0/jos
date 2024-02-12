@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registrace do JOS systemu</title>
+	<title>Registrační systém JOS</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<h1 style="font-family: Arial, sans-serif;">Vitej, zde na tebe ceka JOS</h1>
-	<div id="container" style="font-family: Arial, sans-serif;">
-		<h2>Prihlaseni</h2>
+	<h1>Vítej v systému.</h1>
+	<div id="container">
+		<h2>Přihlášení</h2>
 		<form action="login.php" method="post">
-			<label for="username" style="font-family: Arial, sans-serif;">Prihlasovaci jmeno:</label>
-			<input type="text" name="username" id="username" required style="font-family: Arial, sans-serif;">
-			<label for="password" style="font-family: Arial, sans-serif;">Heslo:</label>
-			<input type="password" name="password" id="password" required style="font-family: Arial, sans-serif;">
-			<input type="submit" value="Login" style="font-family: Arial, sans-serif;">
+			<label for="username">Přihlašovací jméno:</label>
+			<input type="text" name="username" id="username" required>
+			<label for="password">Heslo:</label>
+			<input type="password" name="password" id="password" required>
+			<input type="submit" value="Login">
 		</form>
 		<h2>Registrace</h2>
 		<form action="signup.php" method="post">
-			<label for="username" style="font-family: Arial, sans-serif;">Prihlasovaci jmeno:</label>
-			<input type="text" name="username" id="username" required style="font-family: Arial, sans-serif;">
-			<label for="email" style="font-family: Arial, sans-serif;">Email:</label>
-			<input type="email" name="email" id="email" required style="font-family: Arial, sans-serif;">
-			<label for="password" style="font-family: Arial, sans-serif;">Heslo:</label>
-			<input type="password" name="password" id="password" required style="font-family: Arial, sans-serif;">
-			<input type="submit" value="Signup" style="font-family: Arial, sans-serif;">
+			<label for="username">Přihlašovací jméno:</label>
+			<input type="text" name="username" id="username" required>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required>
+			<label for="password">Heslo:</label>
+			<input type="password" name="password" id="password" required>
+			<input type="submit" value="Signup">
 		</form>
 	</div>
 </body>
