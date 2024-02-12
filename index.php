@@ -65,7 +65,7 @@
               </form>
             </div>
             <a href="signup.php" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-create-account u-none u-text-custom-color-3 u-btn-2">Nemáte účet?</a>
-            <a href="https://jossystem.fun" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-create-account u-none u-text-custom-color-3 u-btn-3">Zapomenuté heslo?</a>
+            <a href="jossystem.fun" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-create-account u-none u-text-custom-color-3 u-btn-3">Zapomenuté heslo?</a>
           </div>
         </div>
       </div>
