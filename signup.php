@@ -11,7 +11,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $username, $email, $password);
 
 if ($stmt->execute()) {
-    header("Location: index.html");
+    header("Location: landing-dash.html");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -2,16 +2,15 @@
 require_once 'config.php';
 
 $username = $_POST['username'];
-$email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+$sql = "INSERT INTO users (username, password) VALUES (?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $username, $email, $password);
+$stmt->bind_param("ss", $username, $password);
 
 if ($stmt->execute()) {
-    header("Location: index.html");
+    header("Location: landing-dash.html");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
